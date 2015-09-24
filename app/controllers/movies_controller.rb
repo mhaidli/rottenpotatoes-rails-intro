@@ -2,6 +2,7 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:title, :rating, :description, :release_date)
+    
   end
 
   def show
@@ -11,7 +12,16 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
+    #Code inspired by: http://railscasts.com/episodes/228-sortable-table-columns?view=asciicast
+    @movies = Movie.order(params[:sort_by])
+    
+    
+    if params[:sort_by] == 'title'
+      @title_header = 'hilite'
+    elsif params[:sort_by] == 'release_date'
+      @release_header ='hilite'
+    end
+    
   end
 
   def new

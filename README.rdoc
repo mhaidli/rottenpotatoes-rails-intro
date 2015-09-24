@@ -1,5 +1,21 @@
 == README
 
+What additional sources did we use?
+http://stackoverflow.com/questions/19762249/highlight-the-title-and-release-header
+http://billpatrianakos.me/blog/2013/09/29/rails-tricky-error-no-implicit-conversion-from-symbol-to-integer/ — Didn’t end up being helpful
+   
+How much time did we spend on each part of the assignment?
+    Chapter 4: 1 hour 15 min
+    Set up and deploying to Heroku: 1 hour 45 min
+    Problem 1:   Tuesday, 9/22: 45 min
+                 Thursday, 9/24: Hella time (More specifically, 1 hour 30 min) 
+   
+What did we get stuck on?
+
+Connecting to Heroku :(
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
