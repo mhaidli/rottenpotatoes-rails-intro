@@ -21,12 +21,14 @@ How much time did we spend on each part of the assignment?
     Problem 1:  Tuesday, 9/22: 45 min
                 Thursday, 9/24: Hella time (More specifically, 1 hour 30 min) 
     Problem 2:  Thursday, 9/24: 15 min
-                Sunday, 9/27: 1 hour 45 min
-    
+                Sunday, 9/27: 2 hours
+                
     We are invoking the time box rule since we worked for over 5 hours and tried really hard.
+    
 What did we get stuck on?
 
 Connecting to Heroku was a very big struggle, as you know. We also had issues running it on Cloud9 which wasted a lot of our time and your time so sorry about that.
+As you know, we switched VMs and it will no longer deploy to Heroku again even though the gemfile is the same, so we just pushed everything to git 
 
 We can't figure out how to access the hash called 'ratings'. We see that it is there when we run our application in a local server because it prints
 the hash with the correct boxes checked, but we really have no idea how to access it. We have been consulting lots of stackoverflow pages as well as

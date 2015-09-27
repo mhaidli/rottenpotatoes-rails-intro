@@ -21,8 +21,8 @@ class MoviesController < ApplicationController
       #@movies = Movie.find(:all, conditions: ["rating IN (?)", params[:ratings]])
       #@movies = Movie.where("rating IN (?)", params[:ratings])
     #end
-    #@movies = Movie.order(params[:sort_by])
-    @movies = Movie.all.find_by_rating(params[:ratings])
+    @movies = Movie.order(params[:x])
+    #@movies = Movie.all.find_by_rating(params[:ratings])
     #@movies = Movie
     #@movies = Movie.order(params[:sort_by]).find_by_rating(params[:ratings])
     #@movies = Movie.find("rating IN (?)", params[:ratings])
