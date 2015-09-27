@@ -28,7 +28,8 @@ How much time did we spend on each part of the assignment?
 What did we get stuck on?
 
 Connecting to Heroku was a very big struggle, as you know. We also had issues running it on Cloud9 which wasted a lot of our time and your time so sorry about that.
-As you know, we switched VMs and it will no longer deploy to Heroku again even though the gemfile is the same, so we just pushed everything to git 
+As you know, we switched VMs and it will no longer deploy to Heroku again even though the Gemfile is the same, so we just pushed everything to GitHub under Abrahams 
+account (github.com/mhaidli)
 
 We can't figure out how to access the hash called 'ratings'. We see that it is there when we run our application in a local server because it prints
 the hash with the correct boxes checked, but we really have no idea how to access it. We have been consulting lots of stackoverflow pages as well as
