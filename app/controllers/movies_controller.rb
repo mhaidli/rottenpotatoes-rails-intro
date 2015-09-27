@@ -12,16 +12,26 @@ class MoviesController < ApplicationController
   end
 
   def index
+    @all_ratings = ['G','PG','PG-13','R']
+    
+    #if ( [params[:ratings]] != nil )
     #Code inspired by: http://railscasts.com/episodes/228-sortable-table-columns?view=asciicast
-    @movies = Movie.order(params[:sort_by])
-    
-    
+  
+      #@movies = Movie.find(:rating => params[:rating])
+      #@movies = Movie.find(:all, conditions: ["rating IN (?)", params[:ratings]])
+      #@movies = Movie.where("rating IN (?)", params[:ratings])
+    #end
+    #@movies = Movie.order(params[:sort_by])
+    @movies = Movie.all.find_by_rating(params[:ratings])
+    #@movies = Movie
+    #@movies = Movie.order(params[:sort_by]).find_by_rating(params[:ratings])
+    #@movies = Movie.find("rating IN (?)", params[:ratings])
+
     if params[:sort_by] == 'title'
       @title_header = 'hilite'
     elsif params[:sort_by] == 'release_date'
       @release_header ='hilite'
     end
-    
   end
 
   def new
@@ -53,3 +63,6 @@ class MoviesController < ApplicationController
   end
 
 end
+
+
+  

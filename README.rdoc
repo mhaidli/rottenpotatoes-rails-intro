@@ -3,42 +3,32 @@
 What additional sources did we use?
 http://stackoverflow.com/questions/19762249/highlight-the-title-and-release-header
 http://billpatrianakos.me/blog/2013/09/29/rails-tricky-error-no-implicit-conversion-from-symbol-to-integer/ — Didn’t end up being helpful
+
+Other things we used with varying success:
+http://stackoverflow.com/questions/11161663/find-vs-find-by-vs-where
+http://stackoverflow.com/questions/11161663/find-vs-find-by-vs-where
+http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html
+http://apidock.com/rails/v4.0.2/ActiveRecord/FinderMethods/find_by
+http://stackoverflow.com/questions/12987920/keep-check-boxes-checked-in-haml
+http://stackoverflow.com/questions/9574659/rails-where-vs-find
+http://guides.rubyonrails.org/active_record_querying.html
+http://stackoverflow.com/questions/14641438/get-save-checkbox-values-in-haml-even-if-submit-button-not-selected
+http://ruby-doc.org/core-1.9.3/Hash.html
    
 How much time did we spend on each part of the assignment?
-    Chapter 4: 1 hour 15 min
+    Chapter 4 setup: 1 hour 15 min
     Set up and deploying to Heroku: 1 hour 45 min
-    Problem 1:   Tuesday, 9/22: 45 min
-                 Thursday, 9/24: Hella time (More specifically, 1 hour 30 min) 
-   
+    Problem 1:  Tuesday, 9/22: 45 min
+                Thursday, 9/24: Hella time (More specifically, 1 hour 30 min) 
+    Problem 2:  Thursday, 9/24: 15 min
+                Sunday, 9/27: 1 hour 45 min
+    
+    We are invoking the time box rule since we worked for over 5 hours and tried really hard.
 What did we get stuck on?
 
-Connecting to Heroku :(
+Connecting to Heroku was a very big struggle, as you know. We also had issues running it on Cloud9 which wasted a lot of our time and your time so sorry about that.
 
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+We can't figure out how to access the hash called 'ratings'. We see that it is there when we run our application in a local server because it prints
+the hash with the correct boxes checked, but we really have no idea how to access it. We have been consulting lots of stackoverflow pages as well as
+the Rubydoc, and nothing seems to work. We also got stuck earlier on sorting the movies by title or date, which ended up to be one line of code that should have been simple but alas was not. 
+Problem 2 may be just as easy, but we really don't know.
