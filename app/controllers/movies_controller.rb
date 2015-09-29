@@ -12,24 +12,40 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @all_ratings = ['G','PG','PG-13','R']
-    
-    #if ( [params[:ratings]] != nil )
-    #Code inspired by: http://railscasts.com/episodes/228-sortable-table-columns?view=asciicast
-  
-      #@movies = Movie.find(:rating => params[:rating])
-      #@movies = Movie.find(:all, conditions: ["rating IN (?)", params[:ratings]])
-      #@movies = Movie.where("rating IN (?)", params[:ratings])
-    #end
-    @movies = Movie.order(params[:x])
-    #@movies = Movie.all.find_by_rating(params[:ratings])
-    #@movies = Movie
-    #@movies = Movie.order(params[:sort_by]).find_by_rating(params[:ratings])
-    #@movies = Movie.find("rating IN (?)", params[:ratings])
 
-    if params[:sort_by] == 'title'
+    @all_ratings = Movie.all_ratings
+    
+    if params[:ratings].nil? && session[:ratings].nil?
+      @our_ratings = Hash[@all_ratings.map {|x| [x,x]}]
+      
+    elsif params[:ratings].nil?
+      @our_ratings = session[:ratings]
+      
+    else
+      @our_ratings = params[:ratings]
+    end
+    
+    if params[:sort_by].nil?
+      @our_sort_by = session[:sort_by]
+    else
+      @our_sort_by = params[:sort_by]
+    end
+    
+    if session[:ratings] != @our_ratings
+      session[:ratings] = @our_ratings
+      redirect_to :ratings => @our_ratings and return
+    end
+    
+    if session[:sort_by] != @our_sort_by
+      session[:sort_by] = @our_sort_by
+      redirect_to :sort_by => @our_sort_by and return
+    end
+
+    @movies = Movie.where(:rating => @our_ratings.keys).order(@our_sort_by)
+
+    if @our_sort_by == 'title'
       @title_header = 'hilite'
-    elsif params[:sort_by] == 'release_date'
+    elsif @our_sort_by == 'release_date'
       @release_header ='hilite'
     end
   end
